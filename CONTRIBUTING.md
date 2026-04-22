@@ -14,23 +14,38 @@ Thank you for wanting to contribute! This guide walks you through everything you
 
 ## 🗂️ Folder Structure
 
-Every tutorial lives in its own folder at the root of the repository:
+Tutorials are organized in **two levels**:
 
 ```
-your-topic/
-├── README.md        ← required: the tutorial text
-└── examples/        ← optional: code snippets from real projects
-    ├── example1.js
-    └── example2.py
+<category>/
+└── <tutorial>/
+    ├── README.md        ← required: the tutorial text
+    └── examples/        ← optional: code snippets from real projects
+        ├── example1.js
+        └── example2.py
 ```
 
-Use a short, lowercase, hyphenated folder name that clearly describes the topic:
+**Category** — a broad grouping (e.g. `programming-basics`, `web-dev`, `softdrinks`, `cooking`).  
+**Tutorial** — the specific topic inside that category (e.g. `variables`, `html-forms`, `redbull`).
+
+If you are adding a tutorial about **RedBull**, a natural home would be:
+
+```
+softdrinks/
+└── redbull/
+    ├── README.md
+    └── examples/
+```
+
+You are free to create a new category if none of the existing ones fit — just pick a name that makes sense.
+
+Use short, lowercase, hyphenated names for both levels:
 
 | ✅ Good | ❌ Avoid |
 |--------|---------|
-| `git-basics` | `GitBasics` |
-| `python-lists` | `python_lists_tutorial` |
-| `html-forms` | `forms` |
+| `programming-basics/variables` | `ProgrammingBasics/Variables` |
+| `web-dev/html-forms` | `web_dev/html_forms_tutorial` |
+| `softdrinks/redbull` | `Softdrinks/RedBull` |
 
 ---
 
@@ -46,18 +61,24 @@ Use a short, lowercase, hyphenated folder name that clearly describes the topic:
    ```
 3. Create a new branch for your tutorial:
    ```bash
-   git checkout -b add-my-topic
+   git checkout -b add-my-tutorial
    ```
 
-### 2. Create Your Tutorial Folder
+### 2. Create Your Category & Tutorial Folders
 
 ```bash
-mkdir my-topic
+mkdir -p my-category/my-tutorial
+```
+
+If the category already exists, just create the tutorial folder inside it:
+
+```bash
+mkdir programming-basics/loops
 ```
 
 ### 3. Write the Tutorial
 
-Create `my-topic/README.md`. Use the [`example-tutorial/README.md`](./example-tutorial/README.md) as a template — it shows the expected structure:
+Create `my-category/my-tutorial/README.md`. Use [`programming-basics/variables/README.md`](./programming-basics/variables/README.md) as a template — it shows the expected structure:
 
 ```
 # Topic Title
@@ -90,7 +111,7 @@ Short one-sentence description.
 If you have a real-world code snippet that illustrates the topic, add it inside an `examples/` subfolder:
 
 ```bash
-mkdir my-topic/examples
+mkdir my-category/my-tutorial/examples
 # then add your file(s)
 ```
 
@@ -101,22 +122,22 @@ Name each file clearly: `basic-usage.js`, `full-example.py`, etc.
 Open the root `README.md` and add a row to the **Topics** table:
 
 ```markdown
-| 📖 [My Topic](./my-topic/README.md) | One-line description of what this tutorial covers |
+| my-category | 📖 [My Tutorial](./my-category/my-tutorial/README.md) | One-line description |
 ```
 
 ### 6. Commit & Push
 
 ```bash
 git add .
-git commit -m "Add tutorial: my-topic"
-git push origin add-my-topic
+git commit -m "Add tutorial: my-category/my-tutorial"
+git push origin add-my-tutorial
 ```
 
 ### 7. Open a Pull Request
 
 Go to the original repository on GitHub and click **New Pull Request**. In the description, briefly explain:
 
-- What topic your tutorial covers.
+- What category and topic your tutorial covers.
 - Why it is useful for beginners.
 - Any code examples you included.
 
@@ -126,10 +147,11 @@ Go to the original repository on GitHub and click **New Pull Request**. In the d
 
 Before submitting, make sure:
 
-- [ ] The tutorial is written in `<topic>/README.md`
+- [ ] The tutorial is written in `<category>/<tutorial>/README.md`
+- [ ] The category name clearly groups the tutorial
 - [ ] The language is simple and beginner-friendly
 - [ ] The tutorial covers only the basics — no overwhelming detail
-- [ ] Code snippets (if any) are in `<topic>/examples/`
+- [ ] Code snippets (if any) are in `<category>/<tutorial>/examples/`
 - [ ] A row has been added to the Topics table in the root `README.md`
 - [ ] The PR description explains the new tutorial
 

@@ -8,11 +8,11 @@ This repository is a growing collection of **beginner-friendly tutorials** — t
 
 ## 📂 Topics
 
-Browse the available tutorials below. Each topic lives in its own folder and is written as a `.md` file so it renders nicely right here on GitHub.
+Tutorials are grouped into **categories**. Each category is a folder; each tutorial lives inside a category.
 
-| Topic | Description |
-|-------|-------------|
-| 📖 [Example Tutorial](./example-tutorial/README.md) | A template showing exactly how tutorials in this repo are structured |
+| Category | Tutorial | Description |
+|----------|----------|-------------|
+| programming-basics | 📖 [Variables](./programming-basics/variables/README.md) | How to store and use data in a program — a complete example tutorial |
 
 > More tutorials coming soon — or **add yours!** See [Contributing](#-contributing) below.
 
@@ -22,22 +22,26 @@ Browse the available tutorials below. Each topic lives in its own folder and is 
 
 ```
 tutorials/
-├── README.md                  ← you are here
-├── CONTRIBUTING.md            ← how to add your own tutorial
-├── example-tutorial/          ← template / example tutorial
-│   ├── README.md              ← the tutorial text (always a .md file)
-│   └── examples/              ← optional: real code snippets
-│       └── hello.py
-└── your-topic/                ← add your own topic folder here!
-    ├── README.md
-    └── examples/
-        └── your-example.py
+├── README.md                        ← you are here
+├── CONTRIBUTING.md                  ← how to add your own tutorial
+└── <category>/                      ← group related tutorials together
+    └── <tutorial>/                  ← one folder per tutorial
+        ├── README.md                ← the tutorial text (always a .md file)
+        └── examples/                ← optional: real code snippets
+            └── example.py
 ```
 
-Every tutorial follows this same structure:
+**Real example** (already in this repo):
 
-- **`<topic>/README.md`** – the written tutorial (required).
-- **`<topic>/examples/`** – a folder of real-world code snippets (optional but encouraged).
+```
+programming-basics/
+└── variables/
+    ├── README.md
+    └── examples/
+        └── hello.py
+```
+
+The category name is up to you — just pick something that groups the tutorial naturally. If no existing category fits, create a new one. There are no strict rules; use your best judgment.
 
 ---
 
@@ -48,11 +52,12 @@ Want to add a tutorial? Awesome! Please read **[CONTRIBUTING.md](./CONTRIBUTING.
 Here is the quick version:
 
 1. **Fork** this repository and create a new branch.
-2. **Create a folder** for your topic (e.g. `git-basics/`, `python-lists/`).
-3. **Write your tutorial** in `<your-topic>/README.md` — follow the layout shown in [`example-tutorial/README.md`](./example-tutorial/README.md).
-4. *(Optional)* Add real code snippets inside `<your-topic>/examples/`.
-5. **Add a row** to the [Topics](#-topics) table in this `README.md` linking to your new tutorial.
-6. Open a **Pull Request** and describe what topic you have added.
+2. **Choose (or create) a category folder** (e.g. `softdrinks/`, `web-dev/`, `cooking/`).
+3. **Create a tutorial folder** inside it (e.g. `softdrinks/redbull/`).
+4. **Write your tutorial** in `<category>/<tutorial>/README.md` — follow the layout shown in [`programming-basics/variables/README.md`](./programming-basics/variables/README.md).
+5. *(Optional)* Add real code snippets inside `<category>/<tutorial>/examples/`.
+6. **Add a row** to the [Topics](#-topics) table in this `README.md` linking to your new tutorial.
+7. Open a **Pull Request** and describe what topic you have added.
 
 Please keep tutorials short, clear, and beginner-friendly — the goal is *the most basic case*, not an exhaustive reference.
 
