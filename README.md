@@ -61,9 +61,19 @@ Here is the quick version:
 2. **Choose (or create) a category folder** (e.g. `softdrinks/`, `web-dev/`, `cooking/`).
 3. **Create a tutorial folder** inside it (e.g. `softdrinks/redbull/`).
 4. **Write your tutorial** in `<category>/<tutorial>/README.md` — follow the layout shown in [`programming-basics/variables/README.md`](./programming-basics/variables/README.md).
-5. *(Optional)* Add real code snippets inside `<category>/<tutorial>/examples/`.
-6. **Add a row** to the [Topics](#-topics) table in this `README.md` linking to your new tutorial.
-7. Open a **Pull Request** and describe what topic you have added.
+5. **Create a `tags.txt` file** at `<category>/<tutorial>/tags.txt`. List every tag, topic, or category that fits your tutorial — one tag per line. These tags are used to build a searchable wiki index, so be generous. Example:
+
+   ```
+   Food
+   Pizza
+   Pineapple
+   Hawaiian
+   Baking
+   ```
+
+6. *(Optional)* Add real code snippets inside `<category>/<tutorial>/examples/`.
+7. **Add a row** to the [Topics](#-topics) table in this `README.md` linking to your new tutorial.
+8. Open a **Pull Request** and describe what topic you have added.
 
 Please keep tutorials short, clear, and beginner-friendly — the goal is *the most basic case*, not an exhaustive reference.
 
