@@ -6,6 +6,10 @@ This repository is a growing collection of **beginner-friendly tutorials** — t
 
 ---
 
+**Navigate:** [📂 Topics](#-topics) · [🗂️ Repository Structure](#️-repository-structure) · [🤝 Contributing](#-contributing) · [📄 License](#-license)
+
+---
+
 ## 📂 Topics
 
 Tutorials are grouped into **categories**. Each category is a folder; each tutorial lives inside a category.
