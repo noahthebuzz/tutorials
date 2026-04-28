@@ -31,6 +31,7 @@ tutorials/
 └── <category>/                      ← group related tutorials together
     └── <tutorial>/                  ← one folder per tutorial
         ├── README.md                ← the tutorial text (always a .md file)
+        ├── tags.txt                 ← required: one tag per line
         └── examples/                ← optional: real code snippets
             └── example.py
 ```
@@ -41,6 +42,7 @@ tutorials/
 programming-basics/
 └── variables/
     ├── README.md
+    ├── tags.txt
     └── examples/
         └── hello.py
 ```

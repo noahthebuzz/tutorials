@@ -1,0 +1,7 @@
+Programming
+Variables
+Beginners
+Python
+Data Types
+Assignment
+Scope

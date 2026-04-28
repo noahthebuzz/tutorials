@@ -20,6 +20,7 @@ Tutorials are organized in **two levels**:
 <category>/
 └── <tutorial>/
     ├── README.md        ← required: the tutorial text
+    ├── tags.txt         ← required: one tag per line (topics / categories)
     └── examples/        ← optional: code snippets from real projects
         ├── example1.js
         └── example2.py
@@ -34,6 +35,7 @@ If you are adding a tutorial about **RedBull**, a natural home would be:
 softdrinks/
 └── redbull/
     ├── README.md
+    ├── tags.txt
     └── examples/
 ```
 
@@ -106,7 +108,23 @@ Short one-sentence description.
 ...
 ```
 
-### 4. Add Code Examples (Optional)
+### 4. Add a tags.txt File
+
+Create `my-category/my-tutorial/tags.txt` and list every relevant tag — one per line. Tags help organise tutorials in the wiki and make them discoverable. Think about the category, technology, concepts covered, and any other keywords a reader might search for.
+
+Example for a RedBull tutorial:
+
+```
+Softdrinks
+Energy Drinks
+RedBull
+Caffeine
+Beverages
+```
+
+Be generous — more tags are better than fewer.
+
+### 5. Add Code Examples (Optional)
 
 If you have a real-world code snippet that illustrates the topic, add it inside an `examples/` subfolder:
 
@@ -117,7 +135,7 @@ mkdir my-category/my-tutorial/examples
 
 Name each file clearly: `basic-usage.js`, `full-example.py`, etc.
 
-### 5. Update the README Topics Table
+### 6. Update the README Topics Table
 
 Open the root `README.md` and add a row to the **Topics** table:
 
@@ -125,7 +143,7 @@ Open the root `README.md` and add a row to the **Topics** table:
 | my-category | 📖 [My Tutorial](./my-category/my-tutorial/README.md) | One-line description |
 ```
 
-### 6. Commit & Push
+### 7. Commit & Push
 
 ```bash
 git add .
@@ -133,7 +151,7 @@ git commit -m "Add tutorial: my-category/my-tutorial"
 git push origin add-my-tutorial
 ```
 
-### 7. Open a Pull Request
+### 8. Open a Pull Request
 
 Go to the original repository on GitHub and click **New Pull Request**. In the description, briefly explain:
 
@@ -148,6 +166,7 @@ Go to the original repository on GitHub and click **New Pull Request**. In the d
 Before submitting, make sure:
 
 - [ ] The tutorial is written in `<category>/<tutorial>/README.md`
+- [ ] A `tags.txt` file is present with at least one tag per line
 - [ ] The category name clearly groups the tutorial
 - [ ] The language is simple and beginner-friendly
 - [ ] The tutorial covers only the basics — no overwhelming detail
